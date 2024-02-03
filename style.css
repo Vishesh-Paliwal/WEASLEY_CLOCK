@@ -279,7 +279,10 @@ body{
             top: 118px;
             left: 116px;
         }
-        
+        .levitate{
+    translate: 0 -1000px;
+    transition: 15s ease-in-out;
+}
         
   }
 
