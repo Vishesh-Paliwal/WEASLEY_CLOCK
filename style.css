@@ -1,178 +1,286 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
+    box-sizing: border-box;
 }
 
 body{
     height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-image: url(hogwarts.jpg);
     background-position: center;
     background-size: cover;
 }
 
+#spells{
+    height: 100vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#page1{
+    height: 100vh;
+    width: 80vw;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #container{
-    height: 500px;
-    width: 500px;
+    height: 700px;
+    width: 700px;
+    background-image: url("clock5.png");
+    background-position: center;
+    background-size: cover;
     border-style: solid;
     border-color: black;
-    border-radius: 50%;
-    /* background-image: url(i6.jpeg);
-    background-position:-300px;
-    background-size: cover; */
+    border-radius: 350px;
+    transform: translateX(-100px);
+    /* background-color: aqua; */
+    /* position: absolute; */
 }
 
-#second, #minute, #hour {
+#second, #minute, #hour{
     transition: transform 0.5s ease-in-out;
-}
-
-#second{
     position: relative;
-    left: 48%;
-    top: 49%;
-    transform-origin: left;
-    transform: rotate(-90deg);
-    display: flex;
 }
 
 #second_hand{
-    height: 2px;
-    width: 125px;
+    position: absolute;
+    height: 200px;
+    width: 10px;
+    top: 150px;
+    left: 345px;
     background-color: black;
-    border-color: black;
-    border-style: solid;
-    position: relative;
-    border-radius: 10px 10px 20px;
-    /* left: 48%;
-    top: 48%;
-    transform-origin: left;
-    transform: rotate(-90deg); */
+    transform-origin: center bottom;
 }
 
 #ron{
     height: 70px;
     width: 70px;
     border-radius: 50%;
+    position: absolute;
+    top: -70px;
+    left: -33px;
     border-style: solid;
-    object-fit: contain;
     background-image: url("ron.jpg");
     background-position: center;
     background-size: cover;
-    
-    /* transform: translateY(-10px); */
-}
-
-
-#minute{
-    position: relative;
-    left: 48%;
-    top: 30%;
-    transform-origin: left;
-    transform: rotate(-90deg);
-    display: flex;
-}
-
-#minute_hand{
-    height: 2px;
-    width: 145px;
-    background-color: black;
-    border-color: black;
-    border-style: solid;
-    position: relative;
-    border-radius: 10px 10px 20px;
-    /* left: 48%;
-    top: 46%;
-    transform-origin: left;
-    transform: rotate(-90deg); */
 }
 
 #fred{
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    border-radius: 45px;
+    position: absolute;
+    top: -70px;
+    left: -33px;
     border-style: solid;
     background-image: url("fred.jpeg");
     background-position: center;
     background-size: cover;
-
-    /* transform: translateY(-10px); */
-}
-
-#hour{
-    position: relative;
-    left: 48%;
-    top: 20%;
-    transform-origin: left;
-    transform: rotate(-90deg);
-    display: flex;
-    /* transform: translateY(-300px); */
-}
-
-
-#hour_hand{
-    height: 2px;
-    width: 170px;
-    background-color: black;
-    border-color: black;
-    border-style: solid;
-    position: relative;
-    border-radius: 10px 10px 20px;
-    /* left: 48%;
-    top: 44%;
-    transform-origin: left;
-    transform: rotate(-90deg); */
 }
 
 #george{
-    height: 65px;
-    width: 65px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
+    position: absolute;
+    top: -70px;
+    left: -33px;
     border-style: solid;
     background-image: url("george.jpg");
     background-position: center;
     background-size: cover;
 }
 
-.number {
+#minute_hand{
     position: absolute;
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
+    height: 150px;
+    width: 10px;
+    top: 200px;
+    left: 345px;
+    background-color: black;
+    transform-origin: center bottom;
 }
 
-#twelve { top: 19%; left: 51%; }
-#one { top: 24%; left: 63%; }
-#two { top: 34%; left: 69%; }
-#three { top: 50%; left: 72%; }
-#four { top: 64%; left: 69%; }
-#five { top: 80%; left: 62%; }
-#six { bottom: 10%; left: 48%; }
-#seven { bottom: 18%; left: 40%; }
-#eight { bottom: 34%; left: 37%; }
-#nine { bottom: 50%; left: 35%; }
-#ten { bottom: 64%; right: 63%; }
-#eleven { bottom: 72%; right: 58%; }
+#hour_hand{
+    position: absolute;
+    height: 120px;
+    width: 10px;
+    top: 230px;
+    left: 345px;
+    background-color: black;
+    transform-origin: center bottom;
+}
 
+#circle{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: black;
+    top: 330px;
+    left: 340px;
+}
 
 #leviosa{
-    height: 40px;
-    width: 90px;
+    height: 60px;
+    width: 220px;
+    margin: 50px;
     padding: 15px;
     border-radius: 20px 50px;
-    transform: translateX(-300px);
     border-style: solid;
+    background-color: rgb(62, 139, 120);
+    color: rgb(60, 231, 223);
 }
 
 #leviosa:hover{
     cursor: pointer;
-    box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
+    box-shadow: rgba(25, 125, 231, 0.8) 0 0 90px 33px;
 }
 
 .levitate{
-    transform: translateY(-1000px);
-    transition: transform 10s ease-in-out;
+    translate: 0 -1000px;
+    transition: 10s ease-in-out;
 }
+
+#luminous{
+    height: 60px;
+    width: 220px;
+    margin: 50px;
+    padding: 15px;
+    border-radius: 20px 50px;
+    border-style: solid;
+    background-color: rgb(62, 139, 120);
+    color: rgb(60, 231, 223);
+}
+
+#luminous:hover{
+    cursor: pointer;
+    box-shadow: rgba(25, 125, 231, 0.8) 0 0 90px 33px;
+}
+
+#Expecto-Patronum{
+    height: 60px;
+    width: 220px;
+    margin: 50px;
+    padding: 15px;
+    border-radius: 20px 50px;
+    border-style: solid;
+    background-color: rgb(62, 139, 120);
+    color: rgb(60, 231, 223);
+}
+
+#Expecto-Patronum:hover{
+    cursor: pointer;
+    box-shadow: rgba(25, 125, 231, 0.8) 0 0 90px 33px;
+}
+
+@media only screen and (max-width: 600px) {
+
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #spells{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: black; */
+        }
+
+        #leviosa, #luminous, #Expecto-Patronum{
+            height: 50px;
+            width: 130px;
+        }
+
+        #container{
+           height: 300px;
+           width: 300px;
+           border-radius: 150px; 
+           transform: translateX(50px);
+        }
+
+        #second_hand{
+            position: absolute;
+            height: 100px;
+            width: 10px;
+            top: 50px;
+            left: 145px;
+        }
+
+        #minute_hand{
+            position: absolute;
+            height: 100px;
+            width: 10px;
+            top: 50px;
+            left: 145px;
+        }
+
+        #hour_hand{
+            position: absolute;
+            height: 100px;
+            width: 10px;
+            top: 50px;
+            left: 145px;
+        }
+
+        #ron{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: -10px;
+            left: -20px;
+            border-style: solid;
+            background-image: url("ron.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #fred{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: -10px;
+            left: -20px;
+            border-style: solid;
+            background-image: url("fred.jpeg");
+            background-position: center;
+            background-size: cover;
+        }
+        #george{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: -10px;
+            left: -20px;
+            border-style: solid;
+            background-image: url("george.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #circle{
+            position: relative;
+            height: 20px;
+            width: 20px;
+            border-radius: 20px;
+            background-color: black;
+            top: 140px;
+            left: 140px;
+        }
+        
+        
+  }
+
